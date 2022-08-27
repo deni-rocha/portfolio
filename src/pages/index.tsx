@@ -1,34 +1,17 @@
-import { GetStaticProps } from 'next';
-import Prismic from '@prismicio/client';
 import { useEffect } from 'react';
 import Aos from 'aos';
 import Head from 'next/head';
 import { HomeContainer } from '../styles/HomeStyles';
+import favicon from '../assets/My-Avatar-Escolar.png';
 
-import Header from '../components/Header';
 import HomeHero from '../components/HomeHero';
 import Experiencias from '../components/Experiencias';
-import Projetos from '../components/Projetos';
 import Conhecimentos from '../components/Conhecimentos';
-import FormContato from '../components/FormContato';
 import Footer from '../components/Footer';
-import { getPrismicClient } from '../services/prismic';
 import 'aos/dist/aos.css';
+import Projetos from '../components/Projetos';
 
-interface IProjeto {
-  slug: string;
-  title: string;
-  type: string;
-  description: string;
-  link: string;
-  thumbnail: string;
-}
-
-interface HomeProps {
-  projetos: IProjeto[];
-}
-
-export default function Home({ projetos }: HomeProps) {
+export default function Home() {
   useEffect(() => {
     Aos.init({ duration: 1500 });
   }, []);
@@ -36,7 +19,7 @@ export default function Home({ projetos }: HomeProps) {
   return (
     <HomeContainer>
       <Head>
-        <title>Home | Meu portfólio</title>
+        <title>Denilson portfólio</title>
         <meta
           name="description"
           content="Sou um desenvolvedor Front-end e aqui apresento alguns projetos desenvolvidos por mim!"
@@ -49,44 +32,17 @@ export default function Home({ projetos }: HomeProps) {
           property="og:description"
           content="Sou um desenvolvedor Front-end e aqui apresento alguns projetos desenvolvidos por mim!"
         />
+        <link rel="icon" href={favicon} />
       </Head>
-
-      <Header />
 
       <main className="container">
         <HomeHero />
-        <Experiencias />
-        <Projetos projetos={projetos} />
+        <Projetos />
         <Conhecimentos />
-        <FormContato />
+        <Experiencias />
       </main>
 
       <Footer />
     </HomeContainer>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  const prismic = getPrismicClient();
-
-  const projectResponse = await prismic.query(
-    [Prismic.Predicates.at('document.type', 'pro')],
-    { orderings: '[document.first_publication_date desc]' }
-  );
-
-  const projetos = projectResponse.results.map(projeto => ({
-    slug: projeto.uid,
-    title: projeto.data.title,
-    type: projeto.data.type,
-    description: projeto.data.description,
-    link: projeto.data.link.url,
-    thumbnail: projeto.data.thumbnail.url
-  }));
-
-  return {
-    props: {
-      projetos
-    },
-    revalidate: 86400
-  };
-};

@@ -96,7 +96,6 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
     background: url(${props => props.imgUrl}) no-repeat center;
     background-size: cover;
     position: relative;
-
     > div.overlay {
       position: absolute;
       width: 100%;

@@ -1,25 +1,12 @@
-import Link from 'next/link';
+import { projetos } from '../ValueProjetos';
 import SectionTitle from '../SectionTitle';
 import ProjetoItem from './ProjetoItem';
 import { Container } from './styles';
 
-interface IProjeto {
-  slug: string;
-  title: string;
-  type: string;
-  description: string;
-  link: string;
-  thumbnail: string;
-}
-
-interface ProjetosProps {
-  projetos: IProjeto[];
-}
-
-function Projetos({ projetos }: ProjetosProps) {
+function Projetos() {
   return (
     <Container>
-      <SectionTitle title="Ultimos Projetos" />
+      <SectionTitle title="Projetos" />
 
       <section>
         {projetos.slice(0, 3).map(projeto => (
@@ -29,14 +16,10 @@ function Projetos({ projetos }: ProjetosProps) {
             title={projeto.title}
             type={projeto.type}
             slug={projeto.slug}
+            link={projeto.link}
           />
         ))}
       </section>
-      <button type="button">
-        <Link href="/projetos">
-          <a>Ver todos os projetos</a>
-        </Link>
-      </button>
     </Container>
   );
 }

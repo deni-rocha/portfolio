@@ -115,6 +115,16 @@ export const CodeItem = styled.pre`
     margin-left: 1rem;
   }
 
+  div.objetivo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    > .redes {
+      cursor: pointer;
+    }
+  }
+
   span.purple {
     color: #c38cdd;
   }

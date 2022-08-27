@@ -7,9 +7,10 @@ interface ProjetoProps {
   type: string;
   slug: string;
   img: string;
+  link: string;
 }
 
-export default function ProjetoItem({ title, type, slug, img }: ProjetoProps) {
+export default function ProjetoItem({ title, type, img, link }: ProjetoProps) {
   return (
     <ProjetoContainer imgUrl={img} data-aos="fade-up">
       <section>
@@ -20,9 +21,9 @@ export default function ProjetoItem({ title, type, slug, img }: ProjetoProps) {
         </div>
       </section>
       <button type="button">
-        <Link href={`/projetos/${slug}`}>
-          <a>
-            Ver mais <AiOutlineRightCircle />
+        <Link href={link}>
+          <a target="_blank">
+            visitar <AiOutlineRightCircle />
           </a>
         </Link>
       </button>
