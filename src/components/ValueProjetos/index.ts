@@ -1,6 +1,8 @@
 import dealta from '../../assets/dealta.png';
 import dogbreed from '../../assets/dogbreed1.png';
 import pokebook from '../../assets/pookebook.png';
+import dealtaApi from '../../assets/deAlta-api.png';
+
 interface IProjeto {
   slug: string;
   title: string;
@@ -34,6 +36,14 @@ const projetos: IProjeto[] = [
     description: 'projeto para listar os pokemons',
     link: 'https://pokebook-liart.vercel.app/',
     thumbnail: pokebook
+  },
+  {
+    slug: '4',
+    title: 'API REST',
+    type: 'backend',
+    description: 'api rest com Node.js e Express.js',
+    link: 'https://dealta-api.herokuapp.com/',
+    thumbnail: dealtaApi
   }
 ];
 

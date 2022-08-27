@@ -9,7 +9,7 @@ function Projetos() {
       <SectionTitle title="Projetos" />
 
       <section>
-        {projetos.slice(0, 3).map(projeto => (
+        {projetos.map(projeto => (
           <ProjetoItem
             key={projeto.slug}
             img={projeto.thumbnail}
