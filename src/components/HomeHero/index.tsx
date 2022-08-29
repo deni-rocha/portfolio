@@ -13,7 +13,7 @@ function HomeHero() {
       <img src={picture} alt="Meu Avatar" />
       <div>
         <TextContainer>
-          <h1>Olá</h1>
+          <h1>Olá,</h1>
           <h2>Que bom ver você aqui!</h2>
         </TextContainer>
         <InfosContainer>

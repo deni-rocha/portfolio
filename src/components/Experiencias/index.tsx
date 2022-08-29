@@ -11,12 +11,14 @@ function Experiencias() {
         <ExperienciaItem
           year="Agosto 2022"
           title="Dev Mobile"
-          description="Responsável pela criação de uma aplicação para pesquisasa, nesse app tem uma página de login e outra de formulários feitas com React-native, fazendo conexão com o banco de dados utilizando WatermolonDB."
+          description="Responsável pela criação de uma aplicação para pesquisas, nesse app tem uma página de login e outra de formulários feitas com React-native, fazendo conexão com o banco de dados utilizando WatermolonDB."
         />
         <ExperienciaItem
           year="Julho 2022"
           title="Dev Frond-end"
-          description="Desenvolvi uma aplicação web com React.js e Typescript, que tem uma página para registrar e outra de listagem"
+          description="Desenvolvi uma aplicação web com React.js e Typescript, que tem uma página para registrar e outra de listagem, a
+          página de registrar tem um formulário para colocar um e-mail, que ao ser
+          submetido faz conexão com uma API que devolve um token (jwt)."
         />
         <ExperienciaItem
           year="Dezembro 2021"
@@ -26,7 +28,7 @@ function Experiencias() {
         <ExperienciaItem
           year="Junho 2020"
           title="Dev Front-end"
-          description="O meu primeiro projeto, um cliente pediu para eu desenvolver uma página web com o tema do Windows XP. Na ocasião, utilizei apenas HTML5, CSS3 e Javascript"
+          description="O meu primeiro projeto, um cliente pediu para eu desenvolver uma página web com o tema do Windows XP. Na ocasião, utilizei apenas HTML5, CSS3 e Javascript."
         />
       </section>
     </Container>
