@@ -28,7 +28,7 @@ function Experiencias() {
         <ExperienciaItem
           year="Junho 2020"
           title="Dev Front-end"
-          description="O meu primeiro projeto, um cliente pediu para eu desenvolver uma página web com o tema do Windows XP. Na ocasião, utilizei apenas HTML5, CSS3 e Javascript."
+          description="O meu primeiro projeto, um cliente solicitou que eu desenvolvesse uma página web com o tema do Windows XP. Na ocasião, utilizei apenas HTML5, CSS3 e Javascript."
         />
       </section>
     </Container>
