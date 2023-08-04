@@ -1,5 +1,5 @@
 import Image from "next/image";
-import imgPerfil from "@/../public/assets/perfil2.jpg";
+import imgPerfil from "@/../public/assets/perfil.jpg";
 
 /* eslint-disable react/no-unescaped-entities */
 const Header = () => {
